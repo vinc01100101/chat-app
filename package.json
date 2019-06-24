@@ -1,0 +1,55 @@
+{
+  "name": "chat-app",
+  "version": "0.0.1",
+  "author": "vincE",
+  "description": "my very first chat app build from scratch using reactjs, webpack, nodejs, express, mongodb/mongoose, and socketio",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && node server.js"
+  },
+  "dependencies": {
+    
+    "body-parser": "^1.16.0",
+    "dotenv": "8.0.0",
+    "express": "^4.16.4",
+    "bcrypt": "3.0.6",
+    "mongodb": "2.2.36",
+    "mongoose": "^5.5.11",
+    "pug": "2.0.3",
+    "connect-flash": "^0.1.1",
+    
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4",
+    "babel-loader": "8.0.6",
+    
+    "passport": "^0.4.0",
+    "express-session": "1.16.2",
+		"passport-local": "^1.0.0",
+		"passport-github": "^1.1.0",
+    
+    "cookie-parser": "^1.4.3",
+    "socket.io": "^2.2.0",
+    "passport.socketio": "^3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-react": "7.0.0",
+    
+    "css-loader": "3.0.0",
+    "style-loader": "0.23.1"
+  },
+
+  "repository": {
+    "url": "https://glitch.com/edit/#!/chat-app-vinc01100101"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

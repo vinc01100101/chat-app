@@ -1,0 +1,61 @@
+html
+  head
+    title Chat App
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='./login.css')
+    
+    script(src='./register.js')
+  body
+    h1.border.center Registration Page
+    
+    hr
+    .error #{errorMessage}
+    h4 Please match the format
+    form(method='post', action='/register', onsubmit='handleSubmit(event)')
+
+      label(for='rName') Name:
+      br
+      input#rName(type='text', name='rName', size='20', maxLength='20', required, pattern="(^[A-Za-z]{1,}\\s?([A-Za-z]{1,})?)", placeholder='John')
+      br
+      br
+      label(for='rSurname') Surname:
+      br
+      input#rSurname(type='text', name='rSurname', size='20', maxLength='20', required, pattern="(^[A-Za-z]{1,}\\s?([A-Za-z]{1,})?)", placeholder='Doe')
+      br
+      br
+      label(for='rSecret') Security Question:
+      br
+      select#rSecret(name='rSecret')
+        option(value='driversLicense') Last four digits of your driver's license
+        option(value='phoneNumber') Last four digits of your phone number
+        option(value='schoolId') Last four digits of your school id number
+        option(value='faveDigit') Your favorite four digits
+      br
+      br
+      label(for='rDigits') Answer
+      br
+      input#rDigits(type='text', name='rDigits', pattern="\\d*", size='4', maxLength='4', required, placeholder='1234')
+      br
+      br
+      label(for='username') Username:
+      br
+      input#username(type='text', name='username', size='20', maxLength='20', required, pattern='\\w*',  placeholder='letters or/and numbers only')
+      br
+      br
+      label(for='password') Password (max 20 characters):
+      br
+      input#password(type='password', name='password', size='20', maxLength='20', placeholder='maximum of 20 characters', required)
+      br
+      br
+
+      label(for='rConfirmPassword') Confirm Password:
+      br
+      input#rConfirmPassword(type='password', size='20', maxLength='20')
+      br
+      br
+
+      button(type='submit') Submit
+    
+    a(href='/')
+      button Back To Login
