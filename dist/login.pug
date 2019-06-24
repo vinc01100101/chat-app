@@ -1,0 +1,29 @@
+html
+  head
+    title Chat App
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='./login.css')
+    
+    
+  body
+    h1.border.center Login Page
+    
+    hr
+    .error #{errorMessage}
+    form(action='/login' method='post')
+      label(for='username') Username:
+      br
+      input#username(name='username', type='text')
+      br
+      br
+      label(for='password') Password:
+      br
+      input#password(name='password', type='password')
+      br
+      br
+      button(type='submit') Login
+      
+    hr
+    a(href='/register') Register
+    
