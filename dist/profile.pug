@@ -5,7 +5,9 @@ html
     meta(name="viewport", content="width=device-width initial-scale=1")
 
   body
-    h3 #{name}
+    h3 Welcome #{name}!
+    button#disconnect Logout
+    h5#usersCount
     div#root
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js')
     script(src="./profile.entry.js")
-
