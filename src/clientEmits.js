@@ -1,7 +1,6 @@
 
 
 module.exports = ()=>{
-  console.log('js loaded!')
 
   const Utils = function(){
     this.ready = (fn)=>{
@@ -23,6 +22,7 @@ module.exports = ()=>{
     const inputs = document.getElementById('userInput');
     const chatbox = document.getElementById('chatlist');
     const usersCount = document.getElementById('usersCount');
+    const connectedUsers = document.getElementById('connectedUsers');
     const logout = document.getElementById('disconnect')
     /*global io*/
     const socket = io();
@@ -45,7 +45,8 @@ module.exports = ()=>{
       }else{
         status = 'disconnected.'
       }
-      usersCount.innerHTML = "Online users: " + data.currentUsers;
+      usersCount.innerHTML = "Online users: " + data.usersCount;
+      connectedUsers.innerHTML = "Connected users: " + data.connectedUsers;
       chatbox.innerHTML = chatbox.innerHTML + '<li style="color: blue">' + data.name + " has " + status + "</li>";
     })
     

@@ -42,6 +42,11 @@ app.use((req,res,next)=>{
   next();
 })
 
+app.use((req,res,next)=>{
+  console.log("COOKIE: " + req.headers.cookie);
+  next();
+})
+
 mongoose.connect(process.env.DATABASE,{useNewUrlParser: true},(err,db)=>{
   if(err){
     console.log('DATABASE ERROR: ' + err.message);
@@ -54,7 +59,7 @@ mongoose.connect(process.env.DATABASE,{useNewUrlParser: true},(err,db)=>{
     http.listen(port,()=>{
       console.log("Listening to port: " + port);
     })
-
+    
     io.use(passportSocketIo.authorize({
       cookieParser: cookieParser,
       key: 'express.sid',

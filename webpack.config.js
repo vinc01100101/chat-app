@@ -6,7 +6,7 @@ module.exports = {
 		path: __dirname + '/dist',
 		filename: '[name].entry.js'
 	},
-	mode: 'production',
+	mode: 'development',
 	module: {
 		rules: [
 		  {

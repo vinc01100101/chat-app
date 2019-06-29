@@ -9,19 +9,18 @@ module.exports = (app,db)=>{
   const ensureAuthenticated = (req,res,next)=>{
     if(req.isAuthenticated()){
       console.log("USER IS AUTHENTICATED")
-      return next();
+      res.render(path.resolve(process.cwd(),'dist/profile.pug'),{
+        name: req.user.name
+      })
     }else{
-      console.log('Someone not authenticated trying to access /Profile.');
-      res.redirect('/');
+      res.render(path.resolve(process.cwd(),'dist/login.pug'),{
+        errorMessage: req.flash('error')
+      });
     }
     
   }
   
-  app.route('/').get((req,res)=>{
-    res.render(path.resolve(process.cwd(),'dist/login.pug'),{
-      errorMessage: req.flash('error')
-    });
-  })
+  app.route('/').get(ensureAuthenticated)
   
   app.route('/login').post(
     passport.authenticate('local',{
@@ -71,12 +70,7 @@ module.exports = (app,db)=>{
     }
   )
   
-  app.route('/profile').get(ensureAuthenticated,(req,res)=>{
-    console.log(JSON.stringify(req.user));
-    res.render(path.resolve(process.cwd(),'dist/profile.pug'),{
-      name: req.user.name
-    })
-  })
+  app.route('/profile').get(ensureAuthenticated)
   
   app.route('/logout').get((req,res)=>{
     req.logout();

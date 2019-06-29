@@ -1,0 +1,28 @@
+.tabBtn{
+  float: left;
+  background: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tabBtn:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+.tabsContainer{
+  background-color: #f1f1f1;
+  border: 5px solid;
+  overflow: hidden;
+}
+
+.usersList{
+  cursor: pointer;
+}
+
+.activeBtn{
+  background-color: black !important;
+  color: white !important;
+}

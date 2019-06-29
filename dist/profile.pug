@@ -3,10 +3,12 @@ html
     title CHAT APP
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width initial-scale=1")
-
+    link(rel='stylesheet' href='./profile.css')
+    script(src="https://code.jquery.com/jquery-1.10.2.js")
+    
   body
-    h3 Welcome #{name}!
-    button#disconnect Logout
+    h3 Welcome
+    h3#me #{name}
     h5#usersCount
     div#root
     script(src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js')

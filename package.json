@@ -1,6 +1,6 @@
 {
   "name": "chat-app",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "author": "vincE",
   "description": "my very first chat app build from scratch using reactjs, webpack, nodejs, express, mongodb/mongoose, and socketio",
   "main": "server.js",
