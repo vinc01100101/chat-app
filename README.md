@@ -3,7 +3,7 @@
 Simple Chat App
 =================
 
-Live app [here](https://chat-app-vinc01100101.glitch.me) from glitch.
+Live app [here](https://vnze-web-chat.glitch.me) from glitch.
 
 
 How to use
